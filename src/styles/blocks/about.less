@@ -1,12 +1,8 @@
 .about {
-    padding-bottom: 90px;
+    padding-bottom: 90px ;
 
     &__container {
         .container;
-    }
-
-    &section-title {
-
     }
 
     &__block {
@@ -21,13 +17,9 @@
         color: @black;
 
         &--w868 {
-            min-width: 868px;
+            max-width: 868px;
             width: 100%;
         }
-
-        // &--mt {
-        //     margin-top: -120px;
-        // }
 
         &--2 {
             grid-area: title;
@@ -37,7 +29,7 @@
     &__text {
         align-self: flex-end;
         margin: 0 0 100px;
-        min-width: 870px;
+        max-width: 870px;
         width: 100%;
         font-weight: 400;
         font-size: 18px;
@@ -57,7 +49,6 @@
         grid-area: picture1;
         position: relative;
         display: block;
-        // width: 65.217%;
 
         &::before {
             content: "";
@@ -87,13 +78,10 @@
     }
 
     &__picture2 {
-        grid-area: picture;
-        //margin-top: -280px;
+        grid-area: picture2;
         align-self: flex-end;
         position: relative;
         display: block;
-        // min-width: 404px;
-        // width: 30.284%;
         &::before {
             content: "";
             display: block;
@@ -130,8 +118,8 @@
         &::after {
             content: "";
             display: block;
-            width: 1000%;
-            padding-top: 40.860%;
+            width: 100%;
+            padding-top: 40.86%;
         }
     }
 
