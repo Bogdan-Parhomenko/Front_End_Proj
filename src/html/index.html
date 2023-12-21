@@ -12,7 +12,7 @@
           <picture class="main-header__picture">
             <svg class="main-header__img" width="1920" height="325">
               <use xlink:href="assets/icons/symbols.svg#lenni"></use>
-          </svg>
+            </svg>
           </picture>
           <p class="main-header__text">
             Для людей, горящих сердцем  и делом
@@ -20,10 +20,10 @@
           </p>
         </header>
         <section class="offers home__offers"></section>
-        <section class="about home__about"></section>
+        @@include('blocks/about.html', {class: 'home__about'})
         <section class="upcoming home__upcoming"></section>
         <section class="listing home__listing"></section>
-        <section class="contacts home__contacts"></section>
+        @@include('blocks/contacts.html', {class: 'home__contacts'})
 
         <div class="doit home__doit"></div>
       </div>
