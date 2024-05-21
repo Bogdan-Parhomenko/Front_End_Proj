@@ -16,13 +16,21 @@ body {
   background-size: auto, 100% auto;
   background-repeat: repeat, repeat-y;
   color: @black;
-  font-family: @font1;
+  font-family: @fontSans;
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
   line-height: 1.375;
   overflow-x: hidden;
   padding-top: 147px;
+
+  @media @bw1660 {
+    padding-top: 111px;
+  }
+
+  @media @bw768 {
+    padding-top: 70px;
+  }
 }
 
 .main {
@@ -46,20 +54,56 @@ img {
 
 input,
 textarea,
-select button {
+select,
+button {
   box-shadow: none;
   outline: none;
   color: @black;
-  font-family: @font1;
+  font-family: @fontSans;
 }
 
 button {
   cursor: pointer;
 }
 
-input,
-textarea {}
-
 textarea {
   resize: none;
+}
+
+input,
+textarea {
+  &::-webkit-input-placeholder {
+    color: #6c6c6c;
+  }
+
+  &::-moz-placeholder {
+    color: #6c6c6c;
+  }
+
+  &:-moz-placeholder {
+    color: #6c6c6c;
+  }
+
+  &:-ms-input-placeholder {
+    color: #6c6c6c;
+  }
+}
+
+input:focus,
+textarea:focus {
+  &::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+  &::-moz-placeholder {
+    color: transparent;
+  }
+
+  &:-moz-placeholder {
+    color: transparent;
+  }
+
+  &:-ms-input-placeholder {
+    color: transparent;
+  }
 }

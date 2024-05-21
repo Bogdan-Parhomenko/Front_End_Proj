@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('blocks/head.html')
+@@include('blocks/head.html')
 
-  <body class="body">
-    @@include('blocks/page-header.html')
+<body class="body">
+  @@include('blocks/page-header.html')
 
-    <main class="main">
-      <div class="home">
-        <header class="main-header home__main-header">
-          <h1 class="main-header__title">Арт — пространство</h1>
-          <picture class="main-header__picture">
-            <svg class="main-header__img" width="1920" height="325">
-              <use xlink:href="assets/icons/symbols.svg#lenni"></use>
-            </svg>
-          </picture>
-          <p class="main-header__text">
-            Для людей, горящих сердцем  и делом
-            место для настоящего
-          </p>
-        </header>
-        <section class="offers home__offers"></section>
-        @@include('blocks/about.html', {class: 'home__about'})
-        <section class="upcoming home__upcoming"></section>
-        @@include('blocks/blog-listing.html', {"class": "home__listing"})
-        
-        @@include('blocks/contacts.html', {class: 'home__contacts'})
+  <main class="main">
+    <div class="home">
+      <header class="main-header home__main-header">
+        <h1 class="main-header__title">Арт — пространство</h1>
+        <a class="main-header__picture">
+          <svg class="main-header__img" width="1920" height="325">
+            <use xlink:href="assets/icons/symbols.svg#lenni"></use>
+          </svg>
+        </a>
+        <p class="main-header__text">
+          Для людей, горящих сердцем и делом <br /> место для настоящего
+        </p>
+      </header>
+      @@include('blocks/offers.html', {class: 'home__offers'})
+      @@include('blocks/about.html', {class: 'home__about'})
+      @@include('blocks/upcoming.html', {class: 'home__upcoming'})
+      @@include('blocks/blog-listing.html', {"class": "home__listing"})
+      @@include('blocks/contacts.html', {class: 'home__contacts'})
 
-        <div class="doit home__doit"></div>
+      <div class="doit home__doit">
+        <div class="doit__text-wrapper">
+          <p class="doit__line1">Просто делайте,</p>
+          <p class="doit__line2">что нравится,</p>
+          <p class="doit__line3">а мы вам поможем</p>
+        </div>
       </div>
-    </main>
-    
-    @@include('blocks/page-footer.html')
-    <script src="scripts/main.js"></script>
-  </body>
+    </div>
+  </main>
+
+  @@include('blocks/page-footer.html')
+  @@include('blocks/event-pp.html')
+
+  <script src="scripts/jquery-3.7.1.min.js"></script>
+  <script src="scripts/jquery.selectric.min.js"></script>
+  <script src="scripts/jquery.mask.min.js"></script>
+  <script src="scripts/jquery.validate.min.js"></script>
+  <script src="scripts/jquery.validate-init.js"></script>
+  <script src="scripts/air-datepicker.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+  <script src="scripts/swiper.min.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+
 </html>

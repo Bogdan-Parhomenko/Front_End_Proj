@@ -1,15 +1,21 @@
 .title {
-    margin: 0 0 150px;
-    box-sizing: border-box;
-    padding: 7px 45px 9px;
-    max-width: 624px;
-    width: 100%;
+    margin: 0 0 80px;
     text-align: center;
-    background-color: #1F1E1E;
-    text-transform: uppercase;
-    font-family: 'Lora';
-    font-size: 36px;
+    font-family: @fontLora;
+    font-size: 70px;
     font-style: normal;
     font-weight: 500;
-    color:  #ffffff;
+    line-height: 90px;
+
+    @media @bw1340 {
+        margin-bottom: 60px;
+        font-size: 40px;
+        line-height: 51px;
+    }
+
+    @media @bw768 {
+        margin-bottom: 40px;
+        font-size: 20px;
+        line-height: 26px;
+    }
 }

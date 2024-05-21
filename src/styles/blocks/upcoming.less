@@ -1,0 +1,78 @@
+.upcoming {
+    background-color: rgba(255, 255, 255, 0.60);
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: -30px;
+        border-left: 36.2vw solid rgba(255, 255, 255, 0.60); 
+        border-right: 64vw solid rgba(255, 255, 255, 0.60);
+        border-top: 30px solid transparent;
+
+        @media @bw1020 {
+            top: -20px;
+            border-top: 20px solid transparent;
+        }
+
+        @media @bw400 {
+            top: -13px;
+            border-top: 13px solid transparent;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        bottom: -30px;
+        border-left: 64vw solid rgba(255, 255, 255, 0.60); 
+        border-right: 36.2vw solid rgba(255, 255, 255, 0.60);
+        border-bottom: 30px solid transparent;
+
+        @media @bw1020 {
+            bottom: -20px;
+            border-bottom: 20px solid transparent;
+        }
+
+        @media @bw400 {
+            bottom: -13px;
+            border-bottom: 13px solid transparent;
+        }
+    }
+
+    &__container {
+        .container;
+        position: relative;
+        padding-top: 100px;
+        padding-bottom: 55px; 
+        margin-top: 30px;
+        margin-bottom: 95px;
+
+        @media @bw1340 {
+            padding-top: 70px;
+            padding-bottom: 50px;
+        }
+
+        @media @bw1020 {
+            padding-top: 60px;
+            padding-bottom: 25px;
+            margin-top: 20px;
+            margin-bottom: 55px;
+        }
+
+        @media @bw400 {
+            padding-top: 30px;
+            padding-bottom: 25px;
+            margin-top: 13px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        width: 150px;
+        margin: 0 0 0 auto;
+    }
+}

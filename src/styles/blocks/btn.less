@@ -1,4 +1,4 @@
-.button {
+.btn {
     display: inline-flex;
     box-sizing: border-box;
     padding: 15px 40px;
@@ -24,6 +24,22 @@
         @media (hover: hover) {
             background-color: @black;
             color: @white;
+        }
+    }
+
+    &--red {
+        border: none;
+        background-color: @red;
+        color: @white;
+        &:active {
+            background-color: @red_dark;
+            color: @white;
+        }
+        &:hover {
+            @media (hover: hover) {
+                background-color: @red_dark;
+                color: @white;
+            }
         }
     }
 }

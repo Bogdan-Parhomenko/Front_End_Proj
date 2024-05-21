@@ -1,0 +1,93 @@
+.form {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        row-gap: 30px;
+        column-gap: 60px;
+        &--mb50 {
+            margin-bottom: 50px;
+        }
+        @media @bw600 {
+            flex-direction: column;
+        }
+    }
+
+    &__group {
+        width: calc(50% - 30px);
+        @media @bw600 {
+            width: auto;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__field {
+        display: block;
+        width: 100%;
+        &--w50 {
+            width: calc(50% - 30px);
+        }
+
+        &--mb30 {
+            margin-bottom: 30px;
+        }
+
+        @media @bw600 {
+            &--w50 {
+                width: auto;
+            }
+        }
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        @media @bw600 {
+            flex-direction: column;
+            gap:35px;
+        }
+    }
+
+    &__submit {
+        &--w50 {
+            width: calc(50% - 30px);
+        }
+        @media @bw600 {
+            &--w50 {
+                width: 100%;
+            }
+        }
+    }
+
+    &__close-btn {
+        margin: 0 auto;
+        padding: 4px 0;
+        border: none;
+        background: transparent;
+        color: @black;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        text-decoration: underline;
+        transition: color 0.2s;
+
+        &:hover {
+            color: @red_dark;
+        }
+    }
+
+    &__check {
+        &--mb40 {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__check-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 0 30px;
+    }
+    
+}

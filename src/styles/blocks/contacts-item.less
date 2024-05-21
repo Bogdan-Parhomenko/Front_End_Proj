@@ -3,6 +3,44 @@
   align-items: center;
   gap: 54px;
 
+  @media @bw1020 {
+    flex-wrap: wrap;
+    gap: 30px;
+    flex-direction: column;
+
+    &:first-child {
+      margin-right: 60px;
+      margin-left: 30px;
+    }
+
+    &:last-child {
+      margin-left: 37px;
+    }
+
+    &--w185 {
+      width: 185px;
+    }
+  }
+
+  @media @bw600 {
+    flex-wrap: nowrap;
+    gap: 30px;
+    flex-direction: row;
+    height: 65px;
+
+    &:first-child {
+      margin: 0;
+    }
+
+    &:last-child {
+      margin-left: 0;
+    }
+
+    &--w185 {
+      width: auto;
+    }
+  }
+
   &__img {
     display: flex;
     justify-content: center;
@@ -11,6 +49,21 @@
     height: 110px;
     background-color: @black;
     color: @red;
+
+    @media @bw600 {
+      width: 65px;
+      height: 65px;
+    }
+  }
+
+  &__content {
+    @media @bw1020 {
+      text-align: center;
+    }
+
+    @media @bw600 {
+      text-align: start;
+    }
   }
 
   &__title {
@@ -19,20 +72,40 @@
     font-size: 20px;
     line-height: normal;
     color: @black;
+
+    @media @bw1020 {
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    @media @bw600 {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
 
   &__info {
+    margin: 0 0 5px;
     display: block;
     font-weight: 400;
     font-size: 16px;
     line-height: normal;
     color: @black;
 
+    @media @bw600 {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      margin: 0;
+    }
+
     &[href] {
+      text-decoration: none;
       transition: color 0.2s;
 
       &:hover {
-        @media (hover: hover){
+        @media (hover: hover) {
           color: @red;
         }
       }
@@ -40,6 +113,10 @@
       &:active {
         color: @red;
       }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
