@@ -1,10 +1,11 @@
 .reserve {
+
     display: grid;
     gap: 65px 11%;
     grid-template-columns: 405px calc(89% - 405px);
-    grid-template-areas:
-        "checks scheme"
-        "order legend";
+    grid-template-areas: 
+    "checks scheme"
+    "order legend";
     width: 100%;
 
     @media @bw1340 {
@@ -15,48 +16,48 @@
     @media @bw1020 {
         gap: 60px;
         grid-template-columns: auto 390px;
-        grid-template-areas:
-            "scheme scheme"
-            "checks legend"
-            "checks order";
+        grid-template-areas: 
+          "scheme scheme"
+          "checks legend"
+          "checks order"; 
     }
 
     @media @bw768 {
         grid-template-columns: 100%;
-        grid-template-areas:
-            "scheme"
-            "legend"
-            "checks"
-            "order";
+        grid-template-areas: 
+          "scheme"
+          "legend"
+          "checks"
+          "order"; 
     }
 
-    &__checks {
+    &__checks{
         grid-area: checks;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
-
-    &__order {
-        grid-area: order;
-
-        @media @bw1340 {
-            min-width: 380px;
-        }
-
-        @media @bw1020 {
-            min-width: 280px;
-        }
-    }
-
-    &__scheme {
+    
+    &__scheme{
         grid-area: scheme;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
     }
+    
+    &__order{
+        grid-area: order;
 
-    &__legend {
+        @media @bw1340 {
+            min-width: 380px;
+        }
+        @media @bw1020 {
+            min-width: 280px;
+        }
+
+    }
+    
+    &__legeng{
         grid-area: legend;
         display: flex;
         flex-direction: column;
@@ -69,7 +70,6 @@
         font-weight: 700;
         font-size: 18px;
         line-height: 25px;
-
         &--mb30 {
             margin-bottom: 30px;
         }
@@ -82,7 +82,6 @@
 
     &__check {
         margin-bottom: 10px;
-
         &:last-child {
             margin-bottom: 0;
         }
@@ -110,12 +109,11 @@
     &__scheme-wrapper {
         position: relative;
         width: 100%;
-
         &::after {
-            content: "";
-            display: block;
-            width: 100%;
-            padding-top: 51.15384%;
+          content: "";
+          display: block;
+          width: 100%;
+          padding-top: 51.15384%;
         }
     }
 
@@ -135,7 +133,7 @@
 
     &__qty {
         &::after {
-            content: " " attr(data-caption) " | " attr(data-price);
+          content: " " attr(data-caption) " | " attr(data-price);
         }
     }
 
@@ -146,10 +144,9 @@
         font-style: normal;
         font-weight: 600;
         line-height: normal;
-
         &::after {
-            content: attr(data-currency);
-            margin-left: 4px;
+          content: attr(data-currency);
+          margin-left: 4px;
         }
 
         @media @bw768 {
@@ -165,16 +162,14 @@
         line-height: normal;
         margin: 25px 0 53px 0;
         text-align: center;
-
         &::before {
-            content: attr(data-caption);
-            margin-right: 33px;
-            text-align: right;
+          content: attr(data-caption);
+          margin-right: 33px;
+          text-align: right;
         }
-
         &::after {
-            content: attr(data-currency);
-            margin-left: 4px;
+          content: attr(data-currency);
+          margin-left: 4px;
         }
 
         @media @bw370 {
@@ -262,7 +257,6 @@
         line-height: 19px;
 
         &--free {
-
             &::before,
             &::after {
                 content: "";
@@ -276,7 +270,6 @@
                 border: 1px solid @black;
                 border-radius: 50%;
             }
-
             &::after {
                 left: 12px;
                 border-color: @red;

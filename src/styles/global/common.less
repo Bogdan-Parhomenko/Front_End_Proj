@@ -1,109 +1,103 @@
-html,
-body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
+html, body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-body {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: @gray;
-  background-image: url(../assets/images/noise.png), url(../assets/images/bg.png);
-  background-position: 0 0, 0 0;
-  background-size: auto, 100% auto;
-  background-repeat: repeat, repeat-y;
-  color: @black;
-  font-family: @fontSans;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.375;
-  overflow-x: hidden;
-  padding-top: 147px;
+.body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: @gray;
+    background-image: url(../assets/images/noise.png),
+    url(../assets/images/bg.png);
+    background-position: 0 0, 0 0;
+    background-size: auto, 100%, auto;
+    background-repeat: repeat, repeat-y;
+    color: @black;
+    font-family: @fontSans;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.375;
+    overflow-x: hidden;
+    padding-top: 147px;
 
-  @media @bw1660 {
-    padding-top: 111px;
-  }
-
-  @media @bw768 {
-    padding-top: 70px;
-  }
+    @media @bw1660 {
+        padding-top: 111px;
+    }
+    
+      @media @bw768 {
+        padding-top: 70px;
+    }
 }
 
-.main {
-  flex: 1 0 auto;
+.main{
+    flex: 1 0 auto;
 }
 
-.page-footer {
-  flex: 0 0 auto;
+.page-footer{
+    flex: 0 0 auto;
 }
 
-a {
-  color: @black;
-  outline: none;
+a{
+    color: @black;
+    outline: none;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
+img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 input,
 textarea,
 select,
-button {
-  box-shadow: none;
-  outline: none;
-  color: @black;
-  font-family: @fontSans;
+button{
+    box-shadow: none;
+    outline: none;
+    color: @black;
+    font-family: @fontSans;
 }
 
 button {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 textarea {
-  resize: none;
+    resize: none;
 }
 
 input,
 textarea {
-  &::-webkit-input-placeholder {
-    color: #6c6c6c;
-  }
-
-  &::-moz-placeholder {
-    color: #6c6c6c;
-  }
-
-  &:-moz-placeholder {
-    color: #6c6c6c;
-  }
-
-  &:-ms-input-placeholder {
-    color: #6c6c6c;
-  }
+    &::-webkit-input-placeholder {
+        color: #6c6c6c; 
+    }
+    &::-moz-placeholder {
+        color: #6c6c6c;
+    }
+    &:-moz-placeholder {
+        color: #6c6c6c;
+    }
+    &:-ms-input-placeholder {
+        color: #6c6c6c;
+    }
 }
 
 input:focus,
 textarea:focus {
-  &::-webkit-input-placeholder {
-    color: transparent;
-  }
-
-  &::-moz-placeholder {
-    color: transparent;
-  }
-
-  &:-moz-placeholder {
-    color: transparent;
-  }
-
-  &:-ms-input-placeholder {
-    color: transparent;
-  }
+    &::-webkit-input-placeholder {
+        color: transparent; 
+    }
+    &::-moz-placeholder {
+        color: transparent;
+    }
+    &:-moz-placeholder {
+        color: transparent;
+    }
+    &:-ms-input-placeholder {
+        color: transparent;
+    }
 }
